@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: coffee-order-scheduler
+  profiles:
+    active: local
+
+  datasource:
+    url: ${DB_URL:jdbc:mysql://localhost:3306/coffee_order?serverTimezone=Asia/Seoul&useSSL=false&allowPublicKeyRetrieval=true}
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:}
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
